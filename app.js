@@ -1,5 +1,24 @@
 class Casino {
-    // Write code here
+    constructor(name, fakeBool){
+        this.name = name
+        this.timesPlayed = 0
+        this.isFakeCoin = fakeBool
+    }
+    playGame(betAmount){
+        if(Math.random() > 0.5){
+            console.log('You won' + betAmount * (this.timesPlayed + 1) + 'dollars from ' + this.name + '!');
+            this.timesPlayed += 1;
+        }else if(this.isFakeCoin = true){
+            console.log(this.name + 'wins!')
+            this.timesPlayed = 0;
+        }else{
+            console.log(this.name + 'wins!');
+            this.timesPlayed = 0;
+        }
+    }
+    rollDie(d){
+        console.log('You rolled a ' + (Math.floor(Math.random() * d) + 1) + '!');
+    }
 };
 
 // TESTS
